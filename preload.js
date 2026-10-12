@@ -1,0 +1,1 @@
+const {contextBridge,ipcRenderer}=require('electron');contextBridge.exposeInMainWorld('darkviws',{save:(projects)=>ipcRenderer.invoke('save-project',projects),load:()=>ipcRenderer.invoke('load-projects')});
